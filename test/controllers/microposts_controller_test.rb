@@ -15,6 +15,7 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # this test is failing
   test "should create micropost" do
     assert_difference('Micropost.count') do
       post microposts_url, params: { micropost: { content: @micropost.content, user_id: @micropost.user_id } }
@@ -33,6 +34,7 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # this test is failing
   test "should update micropost" do
     patch micropost_url(@micropost), params: { micropost: { content: @micropost.content, user_id: @micropost.user_id } }
     assert_redirected_to micropost_url(@micropost)
